@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>SVG Hover effects</title>
+</head>
+
+<body>
+    <h1>SVG Hover effects</h1>
+
+    <div class="container">
+        <button>Button 1</button>
+        <button>Button 2</button>
+        <button>Button 3</button>
+    </div>
+
+    <!-- customisable svg filter  https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feTurbulence-->
+    <svg>
+        <defs>
+            <filter id="wave"> <!-- feTurbulence changes distortion on both axis-->
+                <feTurbulence type='fractalNoise' baseFrequency='0.00001 0.0001' numOctaves='1' results='warp' />
+                <feDisplacementMap xChannelSelector='R' yChannelSelector='G' scale='30' in='SourceGraphic' in2='warpOffset'/>
+            </filter>
+
+        </defs>
+    </svg>
+
+<script src="app.js"></script>
+</body>
+
+</html>

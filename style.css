@@ -1,0 +1,112 @@
+body {
+  background: darkblue;
+  text-align: center;
+}
+
+h1 {
+  font-family: sans-serif;
+  color: white;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 48px auto;
+  height: 600px;
+  width: 60%;
+}
+
+button {
+  font-family: sans-serif;
+  font-weight: 700;
+  position: relative;
+  width: 250px;
+  height: 80px;
+  border-radius: 10px;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 40px;
+  color: white;
+}
+
+button:before {
+  content: '';
+  background: black;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+button:hover {
+  -webkit-animation: squish 0.5s;
+          animation: squish 0.5s;
+}
+
+button:hover:before {
+  background: -webkit-gradient(linear, left top, right top, from(red), color-stop(green), to(blue));
+  background: linear-gradient(to right, red, green, blue);
+  -webkit-filter: url("#wave");
+          filter: url("#wave");
+}
+
+@-webkit-keyframes squish {
+  0% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  60% {
+    -webkit-transform: scaleY(1.5);
+            transform: scaleY(1.5);
+  }
+  80% {
+    -webkit-transform: scaleY(0.9);
+            transform: scaleY(0.9);
+  }
+  80% {
+    -webkit-transform: scaleY(0.9);
+            transform: scaleY(0.9);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
+@keyframes squish {
+  0% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  60% {
+    -webkit-transform: scaleY(1.5);
+            transform: scaleY(1.5);
+  }
+  80% {
+    -webkit-transform: scaleY(0.9);
+            transform: scaleY(0.9);
+  }
+  80% {
+    -webkit-transform: scaleY(0.9);
+            transform: scaleY(0.9);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+/*# sourceMappingURL=style.css.map */
